@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // Add the model and array you want to seed
 
 mongoose.connect(process.env.MONGO_URL)
-  .then(x => console.log(`Connected to ${x.connection.name}`))
+  .then(x => console.log(`Connected to ${x.connection.name}`)) 
   .then(() => {
     return
   })
