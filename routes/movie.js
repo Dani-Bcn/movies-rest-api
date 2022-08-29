@@ -1,12 +1,20 @@
 const router = require('express').Router();
+const Movie = require('../models/Movie')
+
 
 // @desc    Get all movies
 // @route   GET /
 // @access  Public
 router.get('/', async (req, res, next) => {
-  // Run 'npm install' and 'npm run dev' and check on Postman if a GET request 
-  // to http://localhost:8000/api/v1/movies returns the following response.
-  // If it does, you are ready to work!
+  try {
+    const movies = await Movie.find({});
+    if (!movies) {
+      next(new ErrorResponse('No movies found', 404));
+    }
+    res.status(200).json({ data: movies })
+  } catch (error) {
+    next(error);
+  }
   res.status(200).json({ response: 'hello' })
 });
 

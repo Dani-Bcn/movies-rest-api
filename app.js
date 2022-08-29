@@ -9,7 +9,7 @@ const MongoStore = require('connect-mongo');
 const cors = require('cors');
 
 // Routers require
-const moviesRouter = require('./routes/movies');
+const moviesRouter = require('./routes/movie');
 
 const app = express();
 
@@ -41,7 +41,7 @@ app.use(
 )
 
 // routes intro
-app.use('/api/v1/movies', moviesRouter);
+app.use('/api/v1/movie', moviesRouter);
 
 
 // catch 404 and forward to error handler
