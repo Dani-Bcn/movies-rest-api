@@ -9,7 +9,7 @@ const movies = [
     director:"Luca Di Meo",
     duration:0.05,
     sypnosis:"I don´t know",
-    image:"https://www.lavanguardia.com/peliculas-series/images/movie/poster/2019/7/w300/4LHg8wEwh8TNwLuFcaEnxsVqpMT.jpg"
+    image:"https://m.media-amazon.com/images/I/61w2cJ41VfL._AC_SL1500_.jpg"
 
   },
   {

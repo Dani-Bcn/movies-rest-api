@@ -67,7 +67,7 @@ router.put('/:id', async (req, res, next) => {
   try {
     const movie = await Movie.findById(id);
     if (!movie) {
-     res.status(404).json({ response: "Not found"});
+    {response: "Not found"}
     }
     const updateMovie = await Movie.findByIdAndUpdate(id, req.body,{new:true});
     res.status(202).json({ data: updateMovie })
@@ -81,9 +81,7 @@ router.put('/:id', async (req, res, next) => {
 // @route   DELETE /:id
 // @access  Public
 router.delete('/:id', async (req, res, next) => {
-
   const { id } = req.params
-
   try {
     const movie = await Movie.findByIdAndDelete(id);
     if (!movie) {
