@@ -1,10 +1,8 @@
 const router = require('express').Router();
-const Movie = require('../models/Movie')
+/* const Movie = require('../models/Movie') */
 
 
-// @desc    Get all movies
-// @route   GET /
-// @access  Public
+
 router.get('/', async (req, res, next) => {
   try {
     const movies = await Movie.find({});
